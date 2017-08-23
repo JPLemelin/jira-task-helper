@@ -55,7 +55,6 @@ const configureHelper = () => {
   ipcMain.on("updated-values", (event, arg) => {
     console.log("Configuration updated. Refreshing list");
     store.set("first_time", false);
-    console.log(arg);
     store.set(arg);
     service.opts = store.store;
     event.returnValue = true;
@@ -98,7 +97,7 @@ function getAllIssues() {
             label: "Open in browser",
             click: () => {
               shell.openExternal(
-                `https://${store.get("hostname")}/browse/${key}`
+                `http://${store.get("hostname")}/browse/${key}`
               );
             }
           }

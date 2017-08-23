@@ -3,14 +3,14 @@ const request = require("request-promise-native");
 class JIRAService {
   constructor({ hostname, username, password }) {
     this.jiraAPI = request.defaults({
-      baseUrl: `https://${username}:${password}@${hostname}/rest/api/latest`,
+      baseUrl: `http://${username}:${password}@${hostname}/rest/api/latest`,
       json: true
     });
   }
 
   set opts({ hostname, username, password }) {
     this.jiraAPI = request.defaults({
-      baseUrl: `https://${username}:${password}@${hostname}/rest/api/latest`,
+      baseUrl: `http://${username}:${password}@${hostname}/rest/api/latest`,
       json: true
     });
   }

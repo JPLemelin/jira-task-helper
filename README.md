@@ -10,7 +10,7 @@ Faizaan
 ## Getting started
 
 ```sh
-git clone https://github.com/aulisius/jira-task-helper.git
+git clone https://github.com/JPLemelin/jira-task-helper.git
 cd jira-task-helper
 yarn install
 yarn start

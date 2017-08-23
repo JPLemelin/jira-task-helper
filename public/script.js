@@ -5,7 +5,6 @@ let username = document.getElementById("username");
 let password = document.getElementById("password");
 
 ipcRenderer.on("fill-values", (event, arg) => {
-  console.log(arg);
   hostname.value = arg.hostname;
   username.value = arg.username;
   password.value = arg.password;
